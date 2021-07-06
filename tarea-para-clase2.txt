@@ -8,5 +8,7 @@ password
 Otra forma de pisar el yml es diciendo donde se encuentra.
 En tiempo de ejecucion
 
-Queda como tarea
+Queda como tarea poner la logica de si corresponde multa o no.
+Esto esta en la clase evaluador.
+
 
