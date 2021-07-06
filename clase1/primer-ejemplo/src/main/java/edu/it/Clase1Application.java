@@ -1,9 +1,11 @@
 package edu.it;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @SpringBootApplication
@@ -27,7 +29,8 @@ class Z {
 class claseFactory {
     @Bean
     public AA crearUnaInstanciaDeAA() {
-        return () -> System.out.println("Esto es un bean nuevo");
+        // return () -> System.out.println("Esto es un bean nuevo");
+        return new A1();
     }
 }
 
@@ -35,15 +38,18 @@ interface AA {
     public void m1();
 }
 
-// @Component
-// @Primary
+@Component
+@Primary
 class A1 implements AA {
+    @Value("${ticket.path}")
+    private String path;
+
     public void m1() {
-        System.out.println("Es una adaptacion de m1 *****");
+        System.out.println("Es una adaptacion de m1 ***** " + path);
     }
 }
 
-// @Component
+@Component
 class CulquierOtroNombre implements AA {
     public void m1() {
         System.out.println("Estoy en m1");
@@ -52,7 +58,8 @@ class CulquierOtroNombre implements AA {
 
 @Component
 class B {
-    AA a;
+    // @Autowired
+    private AA a;
 
     public B(AA a) {
         this.a = a;

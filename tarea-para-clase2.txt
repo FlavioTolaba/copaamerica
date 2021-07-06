@@ -1,0 +1,12 @@
+La configuracion se puede pisar de diferentes maneras
+
+Multiples yml para una applicacion
+
+Una "variable de entonro" que pise alguna caracteristica del yml
+password
+
+Otra forma de pisar el yml es diciendo donde se encuentra.
+En tiempo de ejecucion
+
+Queda como tarea
+
