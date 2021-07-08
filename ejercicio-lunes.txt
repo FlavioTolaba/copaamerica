@@ -1,0 +1,12 @@
+Excel de todo el transito
+
+es un archivo csv comma separeted value
+
+id;patente;clima;velocidad;multado
+id;patente;clima;velocidad;multado
+id;patente;clima;velocidad;multado
+id;patente;clima;velocidad;multado
+id;patente;clima;velocidad;multado
+
+
+

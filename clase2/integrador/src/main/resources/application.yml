@@ -1,0 +1,11 @@
+ticket:
+  path: c:/var/tickets
+
+spring:
+    datasource:
+        password: ''
+        url: jdbc:mariadb://localhost:3306/copaamerica
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: create
