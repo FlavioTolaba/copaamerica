@@ -1,0 +1,41 @@
+----------------------------------------------------------------------
+Seguridad
+----------------------------------------------------------------------
+
+Encriptacion 
+
+Simetrica 
+
+alice  texto plano --- secuencia1 --------- secuencia1 textoplano bob
+
+La simetrica es muy rapida, pero tanto alice, como bob deben conocer 
+la clave simetrica.
+
+Asimetrica
+
+alice enciptaconunaclave --------------------------- otraclave - bob
+alice otraclave                                      unaclave    bob
+
+Muy lenta y tiene otros problemas como la certificacion
+
+Checksum Abreviacion del mensaje, es una funcion pura, sobreyectiva.
+
+pura: mismo input, mismo output
+sobreyectiva: infinitos inputs, eventualmente dan el mismo output
+
+md5
+sha1
+sha2
+sha512
+sha1024
+
+Punto debil del checksum
+
+sin son pocos caracteres, se puede armar un diccionario de I:O
+
+sha2(password+salt) -> guardar
+
+
+
+
+
