@@ -1,0 +1,70 @@
+----------------------------------------------------------------------
+Notas sobre seguridad
+----------------------------------------------------------------------
+
+Token comun:
+------------
+
+Cuando el usuario se loguea se le expide un token UUID y se le asocia
+una ts de vencimiento del mismo.
+
+Ahora bien, luego de que venza el token ? el usuario puede seguir 
+utilizando ese token PERO se degrada los roles por ejemplo PASA DE 
+ROLE_ADMIN a ROLE_USER
+
+
+Refresh Token
+-------------
+
+Se envian un juego de token uno es el token de session y el otro es
+el refresh token.
+
+Con el token de session voy a poder mantener mi jerarquia de rol y 
+una vez expirado este token, me va a informa token expired y ahi
+tengo que llamar a un endpoint que se llama /refreshlogin
+obviamente, tambien sucede que pierdo la jerarquia.
+
+
+Refresh Token frenetico
+-----------------------
+
+Cada vez que yo accedo a un endpoint me envia un nuevo token para la 
+proxima llamada utilice ese token.
+
+De esa manera NO expira el token por lo menos en un tiempo delta 
+prudencial 24 hs.
+
+
+Accedo a una servicio se me envia
+
+{
+   dato1: '',
+   dato2: '',
+   dato3: ''
+   token: 1351351351351351351351351
+}
+
+Donde guardar los tokens ?
+--------------------------
+
+Lo ideal es: Utilizar algun repositorio tipo redis que tenga autoexpiracion
+con esto me garantizo que no tengo que borrar una y otra vez los token.
+
+En general estos servicios tipo redis o couchbase tiene lo que se llama un
+touch; es lo mismo que en linux, pone la fecha y la hora de ultima utilizacion
+en la hora actual.
+
+
+
+
+P u e d o   N O   g u a r d a r     e l    t o k e n  ?
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
