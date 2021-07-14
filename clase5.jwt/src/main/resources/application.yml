@@ -1,0 +1,17 @@
+ticket:
+  path: c:/var/tickets
+
+trace:
+  path: c:/var/trace/transito.csv
+
+performance:
+  path: c:/var/trace/performance.log
+
+spring:
+    datasource:
+        password: ''
+        url: jdbc:mariadb://localhost:3306/copaamerica
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: none

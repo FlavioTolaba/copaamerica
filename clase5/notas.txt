@@ -57,8 +57,63 @@ en la hora actual.
 
 
 
-P u e d o   N O   g u a r d a r     e l    t o k e n  ?
+P u e d o    N O    g u a r d a r     e l    t o k e n  ?
 ----------------------------------------------------------------------
+
+JWT Json Web Token
+
+
+
+Microservicios
+----------------------------------------------------------------------
+
+Frontend dependiendo que servicio queres consumir 
+
+api/cobranzas
+api/facturas
+
+Proxy ---> Cobranzas (Microservicio basado en apis)
+
+
+Como trabaja el afip.
+
+
+Cada microservicio tiene todas las capas
+----------------------------------------
+
+Presentacion (HTML)
+Backend (Tecnologia que sea) ---- Expone como publico algunas apis que otros requieren
+Repositorio (el que sea)
+
+
+El de Recategorizacion le pide al microservicio de Facturacion el ultimo año completo.
+
+
+Como es la comunicacion
+-----------------------
+
+Las mas simple es HTTP
+
+las mas eficiente es Mensajeria
+
+JMS, KAFKA, RabbitMQ. Todo termina siendo mensje de red. Asyncronico.
+
+
+Problemas de HTTP
+
+Sincronico A -> B -> C -> D
+                B
+                B
+                B
+
+
+
+
+
+
+
+
+
 
 
 
